@@ -580,6 +580,7 @@ dl {
 article {
   padding: 70px 0 50px 0;
   width: 85%;
+  margin-bottom: 50px;
 }
 article button.bt-nota.atual {
   background-color: #ff3eb5;
