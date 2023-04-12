@@ -529,10 +529,21 @@ main {
 //FOOTER_CONTEUDO
 
 .footer_conteudo {
-	padding: 20px 0 20px 0;
+	background-color: $bg;
 	position: fixed;
 	bottom: 0;
-	margin: 0 auto;	
+	left: 0;
+	width: 100%;	
+	::before {
+		position: absolute;
+		content: "";
+		height: 2px;
+		background-color: $rosa;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+	}
 
 	p {
 		color: $grafite;
@@ -554,14 +565,15 @@ main {
 			width: 20px;
 			margin-right: 10px;
 			margin-bottom: -2px;
-				@media (max-width: $tablet) {
-			font-size: 1.1em;
-			margin-bottom: -1px;
-		}
+			@media (max-width: $tablet) {
+				font-size: 1.1em;
+				margin-bottom: -1px;
+			}
 		}
 		float: left;
 		font-size: 1em;
-		margin-top: -35px;
+		margin-top: -28px;
+		color: $roxo;
 		&:hover {
 			text-decoration: underline;
 		}
@@ -582,6 +594,7 @@ main {
 	}
 
 	.direita {
+		color: $roxo;
 		img {
 			width: 20px;
 			margin-left: 10px;
@@ -591,8 +604,8 @@ main {
 			}
 		}
 		float: right;
-		margin-top: -35px;
-		font-size: 1.1em;
+		margin-top: -28px;
+		font-size: 1em;
 		&:hover {
 			text-decoration: underline;
 		}
