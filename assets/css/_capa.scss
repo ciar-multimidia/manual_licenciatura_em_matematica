@@ -1,0 +1,283 @@
+// HEADER_INDEX
+
+.header_index {
+	width: 100%;
+	background-image: url(../img/bg.png);
+	background-size: cover;
+	background-position: top center;
+	padding-bottom: 200px;
+	
+	@media (max-width: $tablet) {
+		background-image: url(../img/bg2.png);
+		padding-bottom: 80px;
+	}
+
+	@media (max-width: $celular) {
+		background-image: url(../img/bg2.png);
+		padding-bottom: 70px;
+	}
+}
+
+.titulos {
+	dl {
+		h1 {
+
+			padding: 200px 0 0 30px;
+			@media (max-width: $tablet) {
+				padding: 50px 0 0 30px;
+			}
+			@media (max-width: $celular) {
+				padding: 60px 0 0 15px;
+			} 
+			dt {
+				font-family: $fonte_titulo;
+				font-size: 2.5em;
+				letter-spacing: 0.03em;
+				color: #fff;
+				margin-bottom: -48px;
+				line-height: 2.4em;
+				@media (max-width: $tablet) {
+					padding: 40px 0 0 0px;
+					font-size: 1em;
+					line-height: 1.2em;
+				}
+				@media (max-width: $celular) {
+					padding: 40px 0 0 0px;
+					font-size: 1em;
+					line-height: 1.2em;
+				} 
+			}
+		}
+
+		dd {
+			font-family: $fonte;
+			font-weight: normal;
+			font-size: 1.4em;
+			color: #fff;
+			margin-left: 0;
+			padding: 40px 0 0 30px;
+			@media (max-width: $tablet) {
+				padding: 40px 0 0 30px;
+				font-size: 1em;
+				line-height: 1.2em;
+			}
+			@media (max-width: $celular) {
+				padding: 45px 0 0 15px;
+				width: 80%;
+				font-size: 1em;
+				line-height: 1.2em;
+			}
+		}
+	}
+}
+
+.botoes_index {
+	a { 	
+		font-family: $fonte;
+		font-weight: 600;
+		background-color: #fff;
+		display: inline-block;
+		color: $rosa;
+		padding: 12px 20px;
+		margin: 30px 0 0 30px;
+		font-size: 1.2em;
+		border-radius: 5px;
+		&:nth-child(2) {
+			margin-left: 15px;
+		}
+		&:hover {
+			color: #fff;
+			background-color: #ff3eb5;
+		}
+		@media (max-width: $tablet) {
+		margin-left: 30px;
+		}
+		@media (max-width: $celular) {
+			width: 40%;
+			text-align: center;
+			font-size: 1em;
+			padding: 10px 25px;
+			margin: 20px 0 0 15px;
+			&:hover {
+				color: none;
+			}
+		}
+	}
+}
+
+.marcaufg {
+	width: 85px;
+	padding-top: 10px;
+	margin-left: 30px;
+	@media (max-width: $tablet) {
+		margin-left: 30px;
+	}
+	@media (max-width: $celular) {
+		margin-left: 15px;
+		width: 60px;
+	}
+}
+
+// ** ARTICLE CAPA **
+
+// Imprimir
+
+.printindex {
+	width: 48px;
+	float: right;
+	margin-top: 47px;
+	pointer: hover;
+	@media (max-width: $tablet) {
+		display: none;
+		}
+	@media (max-width: $celular) {
+		display: none;
+		}
+}
+
+//Ficha técnica
+
+.ficha {
+	width: 100%;
+
+	dl {
+		color: $texto;
+		line-height: 1.4em;
+		dt {
+			h1 {
+				color: $texto;
+				font-size: 1.1em;
+				padding: 1em 0 0 0;
+
+			}
+			font-weight: bold;
+			margin-top: 1.3em;
+		}
+		dd {
+			font-weight: normal;
+			margin-left: 0;
+		}
+	}
+	
+
+	p {
+		color: darken($texto, 10%);
+		padding-bottom: 0;
+	}
+
+	.ciarufg {
+		margin: 30px 0 50px 0;
+		width: 220px;
+	}
+
+	.adufg {
+		margin: 0 0 20px 0;
+		width: 120px;
+		mix-blend-mode: multiply;
+	}
+
+	@media (max-width: $tablet) {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@media (max-width: $celular) {
+		width: 100%;
+		padding-top: 0;
+	}
+}
+
+.isbn {
+	border: 1px solid $rosa;
+	color: $grafite;
+	margin: 15px 0 15px 0;
+	padding: 15px;
+	width: 60%;
+	@media (max-width: $tablet) {
+		width: 100%;
+	}
+	p {
+		font-size: 0.9em;
+		@media (max-width: $celular) {
+		font-size: 0.8em;
+		}
+	}
+	.dado {
+		width: 50px;
+		float: left;
+	}
+	.info {
+		float: right;
+		width: calc(100% - 50px)
+	}
+
+	.info p {
+		width: 100%;
+
+	}
+}
+
+#link {
+	width: 20%;
+	font-weight: 500;
+	display: block;
+	margin-top: 50px;
+	background-color: $rosa;
+	color: #fff;
+	font-size: 1em;
+	padding: 12px;
+	text-align: center;
+	border-radius: 5px;
+	text-decoration: none !important;
+	&:hover {
+		background-color: $rosa;
+		color: #fcc83f;
+	}
+	@media (max-width: $tablet) {
+		width: 32%;
+	}
+	@media (max-width: $celular) {
+		width: 70%;
+		text-align: center;
+	}
+
+}
+
+#linha {
+	border-top: 2px solid $rosa;
+	width: 100%;
+	padding: 30px 0;
+}
+
+
+//FOOTER_INDEX
+
+footer {
+	background-color: $cinza;
+	color: ($texto, 30%);
+	a {
+		color: $grafite;
+		font-weight: 500;
+		&:hover {
+			color: $grafite;
+		}
+	}
+}
+
+.footer_index {
+	text-align: center;
+	font-size: 0.9em;
+	padding: 30px;
+	width: 50%;
+	margin: 0 auto;
+	@media (max-width: $tablet) {
+		width: 80%;
+	}
+	@media (max-width: $celular) {
+		font-size: 1em;
+		width: 100%;
+		padding: 30px 30px 15px 30px;
+		text-align: left;
+	}
+}

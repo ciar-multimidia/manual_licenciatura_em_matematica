@@ -1,0 +1,605 @@
+// HEADER_CONTEUDO
+
+.header_conteudo {
+	background-image: url(../img/bgconteudo.jpg);
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	position: relative;
+	padding: 50px 0 5px 0;
+
+
+	.nome_curso {
+		
+		h1 {
+			font-family: $fonte_titulo;
+			letter-spacing: 0.05em;
+			font-size: 2.2em;
+			font-weight: normal;
+			color: #fff;
+			display: inline-block;
+			margin-bottom: 0;
+			padding: 0 10px 0 0;
+			@media (max-width: $tablet) {
+				padding-left: 15px;
+				padding-bottom: 10px;
+				line-height: 1.2em;
+			}
+		}
+
+		h2 {
+			font-family: $fonte;
+			display: inline-block;
+			vertical-align: bottom;
+			margin: 0;
+			font-weight: 300;
+			font-size: 1.6em;
+			line-height: 1em;
+			color: #fff;
+			margin-bottom: 3px;
+			padding-top: 10px;
+
+
+			@media (max-width: $tablet) {
+				padding-left: 15px;
+				width: 100%;
+			}
+			@media (max-width: $celular) {
+				padding: 0 10px 0 15px;
+				line-height: 1.2em;
+				width: 90%;
+			}
+		}
+
+	}
+
+	.menu {
+		float: right;
+		width: 40px;
+		// clear: right;
+		margin-top: -45px;
+		@media (max-width: $tablet) {
+			float: none;
+			display: inline-block;
+			padding-left: 15px;
+			margin-top: 10px;
+			width: 50px;
+		}
+		@media (max-width: $celular){
+			display: block;
+			float: none;
+			padding: 10px 0 15px 15px;
+			width: 50px;
+			}
+	}
+
+}
+
+//ARTICLE
+
+//Autores
+
+.autor {
+	border-top: 4px solid $rosa;
+	border-bottom: 4px solid $rosa;
+	padding: 20px 0 5px 0;
+	text-align: right;
+	width: 20%;
+	margin-top: 75px;
+	float: right;
+	.clearfix::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+	}
+	p {
+		font-size: 0.7em;
+		line-height: 1em;
+	}
+	@media (max-width: $tablet) {
+		display: block;
+		float: none;
+		width: 95%;
+		margin-top: 20px;
+		text-align: left;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media (max-width: $celular) {
+		width: 90%;
+		float: none;
+		margin-top: 40px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.print {
+	width: 48px;
+	margin-top: 82px;
+	pointer: hover;
+	float: right;
+	clear: right;
+	@media (max-width: $tablet) {
+		display: none;
+		}
+	@media (max-width: $celular) {
+		display: none;
+		}
+}
+
+.elementParagraph {
+  clear: right;
+}
+
+//BOTOES NOTAS DE RODAPE//
+
+button.bt-nota{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	background-color: $rosa;
+	color: #ffffff;
+	padding: 0px 8px 2px 8px;
+	margin: 0 5px;
+	border-radius: 50%;
+	&:before{
+		content: attr(data-nota);
+	}
+}
+
+// NOTA DE RODAPE
+
+#notas-rodape {
+	position: fixed;
+	z-index: 2;
+	right: calc(50% - #{$container, 2});
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: $bg;
+	width: calc(#{$container * .3} - 3em);
+	max-height: calc(100% - 4em);
+	overflow-y: auto;
+	border: 1px solid $rosa;
+	border-radius: 40px;
+	padding: 1.5em;
+	font-size: 0.8em;
+	line-height: 1.4;
+	display: none;
+	@media (max-width: $tablet) {
+		right: 26px;
+	}
+	p {
+		padding-bottom: 0;
+	}
+	&.visivel{
+		display: block;
+	}
+	button.fechar{
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		margin-bottom: 1em;
+		width: 30px;
+		height: 30px;
+		display: block;
+		background-color: $rosa;
+		border-radius: 50%;
+		border: none;
+		img {
+			width: 20px;
+			padding-top: 4px;
+			padding-right: 1px;
+		}
+	}
+	.notas{
+		margin-top: 30px;
+		div{
+			-webkit-hyphens: auto;
+			-ms-hyphens: auto;
+			hyphens: auto;
+			display: none;
+			text-align: justify;
+			&.atual{
+				display: block;
+			}
+		}
+	}
+}
+
+
+
+// CURRICULO
+
+.curriculo {
+	border-top: 4px solid $rosa;
+	border-bottom: 4px solid $rosa;
+	padding: 25px 25px 10px 25px;
+	margin-top: 20px;
+	p {
+		width: 100%;
+	}
+	@media (max-width: $tablet) {
+		width: 100%;
+		float: none;
+		display: block;
+		margin-top: 20px;
+
+	}
+	@media (max-width: $celular) {
+		width: 100%;
+		float: none;
+		margin-top: 20px;
+	}
+}
+
+blockquote {
+	font-size: 0.9em;
+	margin: 0;
+	padding: 0 40px 20px 40px;
+	@media (max-width: $celular) {
+			font-size: 0.9em;
+			margin-left: -10px;
+		}
+}
+
+img {
+	width: 70%;
+}
+
+.imgmenor {
+	img {
+		width: 60%;
+	}
+}
+
+// DESTAQUES
+
+.destaque {
+	font-family: fonte-titulo;
+	color: white;
+	font-size: 1.4em;
+	background-color: $rosa;
+	width: 50%;
+	padding: 30px;
+	border-radius: 15px;
+	text-align: center;
+	margin: 20px 0 40px 0;
+}
+
+
+// TABELA 
+
+.tabela {
+	padding: 15px 0 30px 0;
+	width: 80%;
+	font-size: 0.8em;
+	line-height: 1.4em;
+
+	th {
+		background-color: $rosa;
+		color: $bg;
+		font-weight: normal;
+		padding: 10px;
+		text-align: left;
+	}
+	td {
+		background-color: $cinza;
+		padding: 10px;
+	}
+
+	caption {
+		text-align: left;
+		font-weight: bold;
+		padding-top: 30px;
+	}
+}
+
+
+// PAGINACAO
+
+.pagina {
+	font-size: 0.8em;
+	font-weight: normal;
+	color: $rosa;
+	border-bottom: 1px solid #E5E5E5;
+	width: 75%;
+	display: block;
+	margin: 0 0 30px 0;
+	padding-bottom: 10px;
+	text-align: right;
+	@media (max-width: $tablet) {
+		width: 100%;
+	}
+	@media (max-width: $celular) {
+		width: 100%;
+		font-size: 1.1em;
+	}
+}
+
+//LISTA 
+
+ol {
+	li {
+		font-weight: normal;
+		padding-bottom: 15px;
+		font-size: 0.8em;
+		line-height: 1.4em;
+	}
+}
+
+ul {
+	li {
+		font-weight: normal;
+		padding-bottom: 15px;
+		font-size: 0.8em;
+		line-height: 1.4em;
+	}
+}
+
+
+
+//Sumário
+
+.sumario {
+	padding: 80px 0 80px 0;
+	@media (max-width: $tablet) {
+		padding: 30px 15px 30px 15px;
+	}
+	h1 {
+		color: $rosa;
+		font-size: 2em;
+		display: inline-block;
+		@media (max-width: $tablet) {
+			clear: both;
+		}
+	}
+
+	a {				
+		display: block;
+		color: inherit;
+		border-bottom: 1px solid $rosa;
+		width: 100%;
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		h3 {
+			font-size: 1em;
+			line-height: 1.4em;
+			color: $texto;
+			font-weight: 300;
+			float: left;
+			clear: both;
+			padding: 40px 60px 10px 0;
+			@media (max-width: $tablet) {
+				padding-top: 40px;
+			}
+		}
+
+		p {
+			font-size: 0.8em;
+			line-height: 1em;
+			color: $rosa;
+			font-weight: 300;
+			float: left;
+			clear: both;
+			padding: 0 0 5px 0;
+			@media (max-width: $tablet) {
+				padding-top: 40px;
+			}
+		}
+
+		.numero {
+			float: right;
+			font-size: 1.3em;
+			color: $rosa;
+			font-weight: 300;
+			clear: right;
+			display: inline-block;
+			clear: both;
+			margin-top: -45px;
+			@media (max-width: $tablet) {
+				margin-top: -55px;
+				padding-bottom: 0;
+				font-size: 1em;
+			}
+
+		}
+
+		.clearfix::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+		
+		// &:nth-child(2){
+		// 	float: right;
+		// 	}
+		&:hover {
+			color: $grafite;
+			border-bottom: 1px solid $rosa;
+			.numero, p {
+				color: $rosa;
+			}
+		}
+		@media (max-width: $celular) {
+		width: 100%;
+		}
+		@media (max-width: $tablet) {
+			span {
+			padding: 40px 0 20px 0; 
+			width: 100%;
+			font-weight: normal;
+			display: inline-block;
+			}
+		}
+	}
+}
+
+.iniciarebook {
+		float: right;
+		font-size: 1.2em;
+		font-weight: 500;
+		display: inline-block;
+		border-bottom: none;
+		color: $rosa;
+		margin-top: 100px;
+		&:hover {
+			border-bottom: none;
+			color: $rosa;
+		}
+		@media (max-width: $tablet) {
+			display: none;
+		}
+		@media (max-width: $celular) {
+			display: none;
+		}
+	}
+
+.quadro {
+	border: 1px solid $rosa;
+	width: 80%;
+	margin: 0 0 30px 0;
+	padding-left: 30px;
+    padding-top: 30px;
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+
+//NOTA DE RODAPÉ
+
+main {
+	input[type="checkbox"]{
+    position: absolute;
+    left: -10000px;
+    visibility: hidden;
+	}
+
+	label{
+    // width: 4px;
+    // height: 4px;
+    font-size: 0.7em;
+    // vertical-align: baseline;
+    background-color: #d9d9d9;
+    font-weight: bold;
+    color: black;
+    padding: 3px 6px;
+    margin: 0 2px 0 2px;
+    user-select: none;
+	}
+
+	.nota-rodape {
+    // border-top: 4px solid $amarelo;
+    display: none;
+    position: absolute;
+    float: right;
+    font-size: 0.8em;
+    line-height: 1.4em;
+    right: 0;
+    width: 266px;
+    margin-top: -1em;
+    margin-right: 10px;
+    color: #000;
+    background-color: #f7c40b;
+    z-index: 2;
+    padding: 25px;
+	    a {
+	    text-decoration: none;
+	    color: $rosa;
+	    font-weight: normal;
+	    text-decoration: underline;
+		}
+	}
+		
+	input[type="checkbox"]:checked + label{
+    background-color: $bg;
+	}	
+
+	input[type="checkbox"]:checked + label + .nota-rodape{
+    display: block;
+	}
+}
+
+//FOOTER_CONTEUDO
+
+.footer_conteudo {
+	padding: 20px 0 20px 0;
+	position: fixed;
+	bottom: 0;
+	margin: 0 auto;	
+
+	p {
+		color: $grafite;
+		font-size: 1.2em;
+		font-weight: bold;
+		padding: 0;
+	}
+	@media (max-width: $tablet) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	@media (max-width: $celular) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.esquerda {
+		img {
+			width: 20px;
+			margin-right: 10px;
+			margin-bottom: -2px;
+				@media (max-width: $tablet) {
+			font-size: 1.1em;
+			margin-bottom: -1px;
+		}
+		}
+		float: left;
+		font-size: 1em;
+		margin-top: -35px;
+		&:hover {
+			text-decoration: underline;
+		}
+		@media (max-width: $tablet) {
+			font-size: 1em;
+			margin-bottom: -3px;
+		}
+	}
+
+	.menurodape {
+		padding: 0;
+		img {
+			width: 35px;
+			margin: 0 auto;
+			display: block;
+		}
+		
+	}
+
+	.direita {
+		img {
+			width: 20px;
+			margin-left: 10px;
+			margin-bottom: -2px;
+				@media (max-width: $tablet) {
+				margin-bottom: -3px;
+			}
+		}
+		float: right;
+		margin-top: -35px;
+		font-size: 1.1em;
+		&:hover {
+			text-decoration: underline;
+		}
+		@media (max-width: $tablet) {
+			font-size: 1em;
+		}
+	}
+}
+
+
